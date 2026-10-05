@@ -1,6 +1,5 @@
 # Voice-Authenticated Smart Parking Lock
 
-**سامانه قفل هوشمند صوتی پارکینگ مبتنی بر ADC، DAC و PWM**
 
 A register-level embedded-systems teaching project for **Arduino Uno R3 / ATmega328P**. It learns one speaker saying the Persian passphrase **«پارکینگ باز شو»** (“Parking, open”), compares later utterances against that acoustic template, and drives a servo gate and audio output when a match is accepted.
 
