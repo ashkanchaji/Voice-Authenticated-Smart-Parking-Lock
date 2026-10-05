@@ -1,0 +1,14 @@
+# PlatformIO build output
+.pio/
+*.elf
+*.hex
+*.o
+*.su
+
+# Generated Proteus stimulus (rebuild with tools/prepare_voice_dataset.py)
+assets/scenario.wav
+**/assets/scenario.wav
+
+# Python
+__pycache__/
+*.pyc

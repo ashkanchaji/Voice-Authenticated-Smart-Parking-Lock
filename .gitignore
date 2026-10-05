@@ -1,0 +1,36 @@
+# PlatformIO build output
+.pio/
+*.elf
+*.hex
+*.o
+*.su
+
+# Generated Proteus stimulus (rebuild with tools/prepare_voice_dataset.py)
+assets/scenario.wav
+**/assets/scenario.wav
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Local configuration and analysis artifacts
+.env
+.env.*
+!.env.example
+.agents/
+.codex/
+.claude/
+.cursor/
+AGENTS.md
+CLAUDE.md
+CODEX.md
+GEMINI.md
+SKILL.md
+prompts/
+.github/copilot-instructions.md
+.github/prompts/
+.graphifyignore
+.graphify*
+graphify-out/

@@ -1,0 +1,26 @@
+Ref,Part,Value,Proteus device,Qty,Notes
+U1,Microcontroller board,-,ARDUINO UNO R3,1,"Set Program File to .pio/build/uno/firmware.hex; Clock Frequency 16 MHz"
+U2,Audio power amplifier,-,LM386,1,"Gain 20 with pins 1 and 8 open; +5 V on pin 6, GND on pin 4"
+M1,Servo motor,-,MOTOR-PWMSERVO,1,"Parking gate arm; +5 V, GND, PWM from D9"
+LS1,Speaker,8 ohm,SPEAKER,1,Any Proteus speaker/sounder model
+D1,LED green,-,LED-GREEN,1,ACCESS GRANTED indicator on A1
+D2,LED red,-,LED-RED,1,ACCESS DENIED indicator on A2
+SW1,Push button,-,BUTTON,1,"Training button, D8 to GND, active low"
+R1,Resistor,100k,RES,1,Bias divider upper (A0 to +5 V)
+R2,Resistor,100k,RES,1,Bias divider lower (A0 node to GND)
+R3,Resistor,4.7k,RES,1,Anti-alias series resistor into A0
+R4,Resistor,330,RES,1,Green LED series resistor
+R5,Resistor,330,RES,1,Red LED series resistor
+R10-R15,Resistor,20k,RES,6,"R-2R ladder, one 2R per DAC bit (D2..D7)"
+R16,Resistor,20k,RES,1,"R-2R ladder termination, node N0 to GND"
+R17-R21,Resistor,10k,RES,5,"R-2R ladder series resistors between nodes N0..N5"
+RV1,Potentiometer,10k,POT-HG,1,"Volume, DAC output to LM386 pin 3"
+C1,Capacitor,1uF,CAP-ELEC,1,"AC coupling, audio source to the bias node"
+C2,Capacitor,10nF,CAP,1,"Anti-alias shunt, A0 to GND (3.4 kHz with R3)"
+C3,Capacitor,4.7nF,CAP,1,"Reconstruction filter, ladder output N5 to GND (3.4 kHz with the ladder's 10k)"
+C4,Capacitor,10uF,CAP-ELEC,1,"AC coupling, ladder output to the volume pot"
+C5,Capacitor,220uF,CAP-ELEC,1,"Output coupling, LM386 pin 5 to the speaker"
+C6,Capacitor,100nF,CAP,1,"Decoupling, LM386 supply pin 6 to GND"
+G1,Audio generator,-,"Generator Mode > AUDIO",1,"Attach to MIC_IN; load assets/scenario.wav; see proteus/README.md"
+X1,Oscilloscope,-,OSCILLOSCOPE,1,"Virtual instrument; 4 channels: A0, D9, ladder N5, LM386 out"
+X2,Virtual terminal,-,VIRTUAL TERMINAL,1,"RXD to D1; 115200 baud, 8 data bits, no parity, 1 stop bit"
